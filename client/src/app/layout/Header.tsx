@@ -11,7 +11,9 @@ const rightLinks = [
 ]
 
 const midLinks = [
-    {title: 'catalog', path: '/catalog'},
+    {title: 'inventory', path: ''},
+    {title: 'catalog', path: 'catalog'},
+    {title: 'about', path: 'about'},
 ]
 
 const navStyles = {
@@ -24,6 +26,12 @@ const navStyles = {
     '&.active': {
         color: 'text.secondary'
     }
+}
+
+const navStyles1 = {
+  color: 'inherit',
+  textDecoration: 'none',
+  typography: 'h6'
 }
 
 interface Props{
@@ -39,7 +47,7 @@ export default function Header({handleThemeChange, darkMode}: Props) {
         <Box display='flex' alignItems='center'>
           <Typography variant="h6" component={NavLink}
           to='/'
-          sx={navStyles}>
+          sx={navStyles1}>
             RE-STORE
           </Typography>
           <Switch checked={darkMode} onChange={handleThemeChange} />

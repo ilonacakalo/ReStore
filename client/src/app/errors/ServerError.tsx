@@ -1,5 +1,5 @@
-import { Container, Divider, Paper, Typography } from "@mui/material";
-import { useLocation } from "react-router-dom";
+import { Button, Container, Divider, Paper, Typography } from "@mui/material";
+import { Link, useLocation } from "react-router-dom";
 
 export default function ServerError() {
     const{state} = useLocation();
@@ -13,10 +13,13 @@ export default function ServerError() {
                         {state.error.title}
                     </Typography>     
                     <Divider />
-                    <Typography variant="body1">{state.error.detail || 'Internal server error'}</Typography>      
+                    <Typography variant="body1">{state.error.detail || 'Internal server error'}</Typography> 
+                    <Divider />
+                    <Button fullWidth component={Link} to='/'>Go back to the inventory</Button>    
                 </>
             ) : (
                 <Typography gutterBottom variant='h5'>Server error</Typography>
+
             )}
         </Container>
     )

@@ -14,6 +14,7 @@ const midLinks = [
     {title: 'inventory', path: ''},
     {title: 'catalog', path: 'catalog'},
     {title: 'about', path: 'about'},
+    {title: 'contact', path: 'contact'},
 ]
 
 const navStyles = {

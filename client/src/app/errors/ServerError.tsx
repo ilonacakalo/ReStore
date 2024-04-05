@@ -15,7 +15,7 @@ export default function ServerError() {
                     <Divider />
                     <Typography variant="body1">{state.error.detail || 'Internal server error'}</Typography> 
                     <Divider />
-                    <Button fullWidth component={Link} to='/'>Go back to the inventory</Button>    
+                    <Button fullWidth component={Link} to='/'>Go back to home</Button>    
                 </>
             ) : (
                 <Typography gutterBottom variant='h5'>Server error</Typography>

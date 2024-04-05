@@ -8,6 +8,7 @@ interface Props {
 
 export default function AppPagination({metaData, onPageChange}: Props) {
     const {currentPage, totalCount, totalPages, pageSize} = metaData;
+
     return (
         <Box display='flex' justifyContent='space-between' alignItems='center'>
             <Typography>

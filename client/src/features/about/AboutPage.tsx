@@ -36,8 +36,7 @@ export default function AboutPage(){
                             </ListItem>
                         ))}
                     </List>
-                </Alert>
-            }
+                </Alert>}
         </Container>
     )
 } 

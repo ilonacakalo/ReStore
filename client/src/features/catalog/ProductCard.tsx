@@ -1,6 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Product } from "../../app/models/product";
+import { currencyFormat } from "../../app/util/util";
 
 interface Props {
     product: Product;
@@ -27,13 +28,13 @@ export default function ProductCard({ product }: Props) {
             />
             <CardMedia
                 component="img"
-                sx={{height: 146, bgcolor: "primary.light", objectFit: 'contain'}}
+                sx={{height: 146, bgcolor: '#bddcff', objectFit: 'contain'}}
                 image={product.pictureUrl}
                 title={product.name}
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography gutterBottom color="secondary" variant="h5">
-                    {(product.price / 100).toFixed(2)}€
+                    {currencyFormat(product.price)}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     {product.brand} / {product.type}

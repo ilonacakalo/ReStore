@@ -5,7 +5,7 @@ const Home: React.FC = () => {
   return (
     <Container maxWidth="md" style={{ textAlign: 'center', marginTop: '2rem', marginBottom: '2rem' }}>
       <Typography variant="h2" style={{ marginBottom: '1rem' }}>
-        Welcome to VENTAR,<br></br>our inventory management system
+        Welcome to ILONA,<br></br>our inventory management system
       </Typography>
       <Typography variant="body1" style={{ marginBottom: '1rem' }}>
         This system has been designed to help you keep track of your inventory efficiently.

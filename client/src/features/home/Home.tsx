@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <Typography variant="body1" style={{ marginBottom: '1rem' }}>
         To get started with managing your inventory, please log into your account or create a new one.
       </Typography>
-      <img src="https://res.cloudinary.com/ddblhpply/image/upload/f_auto,q_auto/gog03fu9oc6mwn2jo53j" alt="Inventory" style={{ maxWidth: '35%', height: 'auto', marginBottom: '1rem' }} />
+      <img src="https://res.cloudinary.com/ddblhpply/image/upload/v1713366279/logo_transparent_jqiqdi.png" alt="Inventory" style={{ maxWidth: '35%', height: 'auto', marginBottom: '1rem' }} />
     </Container>
   );
 };

@@ -62,6 +62,21 @@ export default function Catalog() {
                     </Paper>
 
                     <Paper sx={{ mb: 2, p: 2 }}>
+                        <Typography>Types:</Typography>
+                        <CheckboxButtons
+                            items={types}
+                            checked={productParams.types || []}
+                            onChange={(items: string[]) => {
+                                dispatch(setProductParams({
+                                    types: items,
+                                    pageNumber: 1
+                                }));
+                            }}
+                            clear={clearFilters} // Pass clear prop
+                        />
+                    </Paper>
+
+                    <Paper sx={{ mb: 2, p: 2 }}>
                         <Typography>Brands:</Typography>
                         <CheckboxButtons
                             items={brands}
@@ -76,20 +91,6 @@ export default function Catalog() {
                         />
                     </Paper>
 
-                    <Paper sx={{ mb: 2, p: 2 }}>
-                        <Typography>Types:</Typography>
-                        <CheckboxButtons
-                            items={types}
-                            checked={productParams.types || []}
-                            onChange={(items: string[]) => {
-                                dispatch(setProductParams({
-                                    types: items,
-                                    pageNumber: 1
-                                }));
-                            }}
-                            clear={clearFilters} // Pass clear prop
-                        />
-                    </Paper>
                     <Button onClick={clearAllFilters} variant="outlined" color="secondary" sx={{ position: 'absolute' }}>
                         Clear Filters
                     </Button>

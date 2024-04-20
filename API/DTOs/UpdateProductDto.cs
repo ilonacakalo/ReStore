@@ -30,7 +30,7 @@ namespace API.DTOs
         public string Brand { get; set; }
 
         [Required]
-        [Range(0, 20)]
+        [Range(0, 100)]
         public int QuantityInStock { get; set; }
 
         public User User {get; set;}

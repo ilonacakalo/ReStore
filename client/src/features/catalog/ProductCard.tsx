@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import { Product } from "../../app/models/product";
 import { currencyFormat } from "../../app/util/util";
 
+
 interface Props {
     product: Product;
+
 }
 
-export default function ProductCard({ product }: Props) {
+export default function ProductCard({ product }: Props) { // Ensure onDelete is included in Props
+
+
     return (
         <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%', maxWidth: 300 }}>
             <CardHeader
@@ -21,7 +25,7 @@ export default function ProductCard({ product }: Props) {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'flex-start',
-                        textAlign: 'leftr',
+                        textAlign: 'left',
                         overflow: 'hidden'
                     }
                 }}
@@ -46,6 +50,7 @@ export default function ProductCard({ product }: Props) {
             </CardContent>
             <CardActions>
                 <Button component={Link} to={`/catalog/${product.id}`} size="small">View</Button>
+
             </CardActions>
         </Card>
     );
